@@ -1,22 +1,23 @@
+// let button = document.createElement("button")
+// button.innerText= "start"
+// alert(button.outerHTML)
 document.addEventListener("DOMContentLoaded",() => {
     const getDeck = async() => {
         try{
             let response = await axios.get("https://deckofcardsapi.com/api/deck/new/")
-            let deckID = response.data.deckID
-            let shuffle = await axios.get(`https://deckofcardsapi.com/api/deck/${deckID}/shuffle/`);
-            let draw = await axios.get(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=2`);
+            let deck_id = response.data.deck_id
+            let shuffle = await axios.get(`https://deckofcardsapi.com/api/deck/${deck_id}/shuffle/`);
+            let draw = await axios.get(`https://deckofcardsapi.com/api/deck/${deck_id}/draw/?count=2`);
         }catch(error){
             console.log(error + " this a error ");
             
         }
-        
-        const displayCards = () => {
-            let h2 = document.createElement("h2")
-            draw.document.appendChild(h2)
+        const displayCards = async () => {
+          let img = document.createElement("img")
+          
+        }
     }
-
-    }
-    //displayCards()
+    displayCards()
     getDeck()
 })
 
