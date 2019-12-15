@@ -9,6 +9,10 @@ h1{
     
 }
 
-#player1{
+#human{
     justify-content: left;
+}
+
+#computer{
+    justify-content: right;
 }
