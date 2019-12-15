@@ -9,7 +9,6 @@ h1{
     
 }
 
-footer{
-    display: flex;
+#player1{
     justify-content: left;
 }
