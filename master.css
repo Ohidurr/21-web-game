@@ -3,3 +3,8 @@ h1{
     justify-content: center;
     
 }
+
+footer{
+    display: flex;
+    justify-content: left;
+}

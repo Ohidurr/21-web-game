@@ -6,8 +6,20 @@ document.addEventListener("DOMContentLoaded",() => {
             let shuffle = await axios.get(`https://deckofcardsapi.com/api/deck/${deckID}/shuffle/`);
             let draw = await axios.get(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=2`);
         }catch(error){
-            console.log("You ran into a error! oh no!");
-            debugger
+            console.log(error);
+            
         }
+        
+        const displayCards = () => {
+            let h2 = document.createElement("h2")
+            draw.document.appendChild(h2)
     }
+
+    }
+    //displayCards()
+    getDeck()
 })
+
+// if compScore < userScore === 21 (win)
+//  compScore < userScore  < 21 (win)
+// compScore > 21 === win
