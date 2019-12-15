@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded",() => {
             let shuffle = await axios.get(`https://deckofcardsapi.com/api/deck/${deckID}/shuffle/`);
             let draw = await axios.get(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=2`);
         }catch(error){
-            console.log(error);
+            console.log(error + " this a error ");
             
         }
         
