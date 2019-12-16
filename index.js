@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded",() => {
     let deck_id
     let humanScore = 0
     let compScore = 0
-    let computer
-    let human
+    let computer;
+    let human;
     const getDeck = async() => {
         try{
             let res = await axios.get("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded",() => {
              }
              return score;
             }
-        const draw = async (deck_id, num, score) => {
+        const draw = async (deck_id, num, score, player) => {
         let draw = await axios.get(`https://deckofcardsapi.com/api/deck/${deck_id}/draw/?count=${num}`);
         for (let i = 0; i < num; i++){
             let value = draw.data.cards[i].value
@@ -71,15 +71,15 @@ document.addEventListener("DOMContentLoaded",() => {
         
         let start = document.querySelector("#start")
         start.addEventListener("click",() =>{
-            draw(deck_id,2,humanScore)
+            draw(deck_id,2,humanScore,human)
         })
         let hit = document.querySelector("#hit")
         hit.addEventListener("click",() => {
-            draw(deck_id,1,humanScore) 
+            draw(deck_id,1,humanScore,human) 
         })
         let stay = document.querySelector("#stay")
         stay.addEventListener("click",() => {
-            draw(deck_id,3,compScore)
+            draw(deck_id,3,compScore,computer)
         })
         
     
