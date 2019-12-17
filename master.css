@@ -8,17 +8,20 @@ h1{
     
 }
 
-#human{
+#human_score{
+    display: flex;
     justify-content: left;
 }
 
-#computer{
+#computer_score{
+    display: flex;
     justify-content: right;
 }
 h2{
     color: white;
 }.scores{
+    color: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 
 }
