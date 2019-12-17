@@ -17,7 +17,8 @@ h1{
 }
 h2{
     color: white;
-}#scores{
+}.scores{
     display: flex;
+    justify-content: center;
 
 }
